@@ -13,7 +13,7 @@ This Command Line Utility does the following:
 
 The utility uses a single self-contained file:
 
-* QfxToQboConverter.exe
+* [QfxToQboConverter.exe](QfxToQboConverter.exe)
 * requires .NET 4.5 or later
 
 To use the utility:
