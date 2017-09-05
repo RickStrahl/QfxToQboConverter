@@ -11,6 +11,10 @@ This Command Line Utility does the following:
 * Writes the file out as a QBO file
 * Opens the file in Quickbooks via Shell execution
 
+The utility uses a single self-contained file:
+
+* QfxToQboConverter.exe
+* requires .NET 4.5 or later
 
 To use the utility:
 
@@ -46,3 +50,5 @@ Now QFX files are associated with the utility.
 
 > #### Default Parameters Only for Associations
 > Association only runs with the default parameters, which means you only can use the default bank id of 2200. If you have more than one bank you're importing from QIF make sure you use the command line utility and apply the appropriate bank id for each.
+
+### 
