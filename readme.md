@@ -2,18 +2,18 @@
 
 This utility performs a very simple job:
 
-It converts a QIF file's <INTUI.BID> Id using a value of a known and supported instution. QIF and QBO files both are OFX formatted files, the difference being that QBO is an Intuit authorized format that requires a bought and paid for Intuit ID. Many smaller banks don't have an Intuit ID and thus the QIF files can't be imported.
+It converts a Quicken QIF file's <INTUI.BID> Id using a value of a known and supported instution so that Quickbooks can open the file. QIF and QBO files both are OFX formatted files, but the difference is that QBO is an Intuit authorized format that requires a bought and paid for Intuit ID. Many smaller banks don't have an Intuit ID and thus the QIF files can't be imported. 
 
 This Command Line Utility does the following:
 
 * Loads a QIF file
-* Sets the <INTUI.BID> Id to a known value (default 2200)
+* Sets the <INTUI.BID> Id to a known value of a supported bank (default 2200)
 * Writes the file out as a QBO file
 * Opens the file in Quickbooks via Shell execution
 
 The utility uses a single self-contained file:
 
-* [QfxToQboConverter.exe](QfxToQboConverter.exe)
+* [QfxToQboConverter.exe](https://github.com/RickStrahl/QfxToQboConverter/raw/master/QfxToQboConverter.exe)
 * requires .NET 4.5 or later
 
 To use the utility:
@@ -30,6 +30,12 @@ inputfile  - the QFX input file. If not specified you'll be prompted.
 -o QBO output file to create (not specified: same as .qif with .qbo extension)
 -n Don't open in QuickBooks automatically
 -b Fake Bank Id to assign - default is 2200 
+
+
+Examples:
+---------
+QfxToQboConverter c:\temp\transactions.qfx 
+QfxToQboConverter c:\temp\transactions.qfx -o c:\temp\qbtransactions.qbo -b 4530 -n
 ```
 
 > #### Bank Displayed in QuickBooks
